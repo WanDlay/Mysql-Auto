@@ -18,7 +18,7 @@ COLOR3='\33[0;33m'
 NC='\033[0m'                                                #no color
 
  if [ "$(id -u)" != "0" ]; then
-         printf "${RED}ERREUR : SH-FIVEM  n'a pas accès root. ⛔️\\n" 1>&2
+         printf "${RED}ERREUR : SH-Mysql  n'a pas accès root. ⛔️\\n" 1>&2
          printf "\\n"
          exit 1
  fi
@@ -40,7 +40,7 @@ echo
     read reponse
 if [[ "$reponse" == "o" ]]
 then 
-printf "${CYAN} Démarrage de l'instalaltion de MariaDB pour serveur FiveM !"
+printf "${CYAN} Démarrage de l'instalaltion de MariaDB pour serveur Mysql !"
     apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
     LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
     add-apt-repository -y ppa:chris-lea/redis-server
